@@ -1,0 +1,36 @@
+{% load  static %}
+{% block content %}
+<section class="mh-blog image-bg featured-img-two" id="mh-blog">
+    <div class="img-color-overlay">
+        <div class="container">
+            <div class="row section-separator">
+                <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                    <h3>Featured Posts</h3>
+                </div>
+                {% for post in object_list  %}
+                <div class="col-sm-12 col-md-4">
+                    <div class="mh-blog-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                        {% if post.image %}
+                        <img src="{{post.image_thumbnail.url}}" alt="" class="img-fluid">
+                        {% else %}
+                        <img src="{% static 'assets/images/b-3.png' %}" alt="" class="img-fluid">
+                        {% endif %}
+                        <div class="blog-inner">
+                            <h2><a href="{% url 'post_detail' post.pk %}">{{post.title}}</a></h2>
+                            <div class="mh-blog-post-info">
+                                <ul>
+                                    <li><strong>Post On</strong><a href="#">{{post.created | date:"M j, Y"}}</a></li>
+                                    <li><strong>By</strong><a href="#">{{post.author}}</a></li>
+                                </ul>
+                            </div>
+                            <p>{{post.body | truncatewords:30}}</p>
+                            <a href="{% url 'post_detail' post.pk %}">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock  %}

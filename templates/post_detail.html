@@ -1,0 +1,284 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+    
+<head>
+        <title>Ajayi Sodiq Portfolio</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Maha Personal cv/resume template for professional and personal website." />
+        <meta name="keywords" content="creative, cv, designer,  online cv, online resume, powerful portfolio, professional, professional resume, responsive, resume, vcard " />
+        <meta name="developer" content="Md. Siful Islam">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                
+        <!-- FAV AND ICONS   -->
+        <link rel="shortcut icon" href="{% static 'assets/images/favicon.ico' %}">
+        <link rel="shortcut icon" href="{% static 'assets/images/apple-icon.png' %}">
+        <link rel="shortcut icon" sizes="72x72" href="{% static 'assets/images/apple-icon-72x72.png' %}">
+        <link rel="shortcut icon" sizes="114x114" href="{% static 'assets/images/apple-icon-114x114.png' %}">
+        
+        <!-- Google Font-->
+        <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="{% static 'assets/icons/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'assets/plugins/css/bootstrap.min.css' %}">
+        <!-- Animate CSS-->
+        <link rel="stylesheet" href="{% static 'assets/plugins/css/animate.css' %}">
+        <!-- Owl Carousel CSS-->
+        <link rel="stylesheet" href="{% static 'assets/plugins/css/owl.css' %}">
+        <!-- Fancybox-->
+        <link rel="stylesheet" href="{% static 'assets/plugins/css/jquery.fancybox.min.css' %}">
+        
+        <!-- Custom CSS-->
+        <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+        
+        <!-- Colors -->
+        <link rel="alternate stylesheet" href="{% static 'assets/css/colors/blue.css' %}" title="blue">
+        <link rel="stylesheet" href="{% static 'assets/css/colors/defauld.css' %}" title="defauld">
+        <link rel="alternate stylesheet" href="{% static 'assets/css/colors/green.css' %}" title="green">
+        <link rel="alternate stylesheet" href="{% static 'assets/css/colors/blue-munsell.css' %}" title="blue-munsell">
+        <link rel="alternate stylesheet" href="{% static 'assets/css/colors/orange.css' %}" title="orange">
+        <link rel="alternate stylesheet" href="{% static 'assets/css/colors/purple.css' %}" title="purple"> 
+        <link rel="alternate stylesheet" href="{% static 'assets/css/colors/slate.css' %}" title="slate">
+        <link rel="alternate stylesheet" href="{% static 'assets/css/colors/yellow.css' %}" title="yellow">
+        
+    </head>
+    <body class="dark-vertion black-bg">
+        
+        <!-- Start Loader -->
+        <div class="section-loader">
+            <div class="loader">
+                <div></div>
+                <div></div> 
+            </div>
+        </div>
+        <!-- End Loader -->
+        
+        <!--
+        ===================
+           NAVIGATION
+        ===================
+        -->
+        <header class="black-bg mh-header mh-fixed-nav nav-scroll mh-xs-mobile-nav" id="mh-header">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <nav class="navbar navbar-expand-lg mh-nav nav-btn">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{% url 'home' %}">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/#mh-about">About</a>
+                                </li>
+                                <li class="nav-item">
+                                   <a class="nav-link" href="#mh-contact">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        
+        {% block content %}
+        <section class="mh-home image-bg home-2-img" id="mh-home">
+            <div class="img-foverlay img-color-overlay">
+                <div class="container">
+                    <div class="row section-separator">
+                        <div class="mh-page-title text-center col-sm-12">
+                            <h2>Blog</h2>
+                            <p>Start Doing, Stop wishing<br>
+                           </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mh-blog">
+            <div class="container">
+                <div class="row section-separator">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12">
+                                <div class="mh-blog-item dark-bg blog-single">
+                                    {% if post.image %}
+                                    <img src="{{post.image_thumbnail2.url}}" alt="blog image" class="img-fluid">
+                                    {% else %}
+                                    <img src="{% static 'assets/images/b-3.png' %}" alt="blog image" class="img-fluid">
+            
+                                  {% endif %}
+                                    <div class="blog-inner">
+                                        <h2><a href="#">{{post.title}}</a></h2>
+                                        <div class="mh-blog-post-info">
+                                            <ul>
+                                                <li><strong>Post On</strong><a href="#">{{post.created | date:"M j, Y"}}</a></li>
+                                                <li><strong>By</strong><a href="#">{{post.author}}</a></li>
+                                            </ul>
+                                        </div>
+                                        <p>{{post.body}}</p>                                        
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <!-- Comments-->
+                            
+
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- SIDEBAR -->
+                    <div class="col-md-4">
+                        <div class="mh-blog-sidebar">
+                            <div class="sidebar-item mh-author-info">
+                                <div class="mh-author-img">
+                                    <div class="img-border">
+                                        <img src="{% static 'images/sd.jpg' %}" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                                <h2>Ajayi Sodiq</h2>
+                                <h4>Software Engineer</h4>
+                                <p>
+                                    I love working on web applications. 
+                                    I'm very good at creating beautiful, 
+                                    responsive, reliable and user-friendly 
+                                    web applications.
+                                    <br>
+                                    I can create a cross platform, fast and 
+                                    efficient mobile applications to help 
+                                    promote services rendered by different 
+                                    companies and individuals.
+                                </p>
+                                <ul class="social-icon">
+                                    <li><a href="https://www.facebook.com/surdyhey" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://twitter.com/surdy_a" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="https://github.com/Surdy-A" target="_blank"><i class="fa fa-github"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble" target="_blank"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- <div class="sidebar-item mh-blog-category">
+                                <h3>Category</h3>
+                                <ul>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Techonology</a></li>
+                                    <li><a href="#">Food</a></li>
+                                    <li><a href="#">Travel</a></li>
+                                    <li><a href="#">Photography</a></li>
+                                </ul>
+                            </div>
+                            <div class="sidebar-item mh-blog-category">
+                                <h3>Archive</h3>
+                                <ul>
+                                    <li><a href="#">2018 (10)</a></li>
+                                    <li><a href="#">Techonology (8)</a></li>
+                                    <li><a href="#">Food (6)</a></li>
+                                    <li><a href="#">Travel (8)</a></li>
+                                    <li><a href="#">Photography (11)</a></li>
+                                </ul>
+                            </div>
+                            <div class="sidebar-item mh-blog-insta">
+                                <h3>Instagram</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/b-1.png" alt="" class="img-fluid">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/b-1.png" alt="" class="img-fluid">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/b-1.png" alt="" class="img-fluid">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/b-1.png" alt="" class="img-fluid">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/b-1.png" alt="" class="img-fluid">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/b-1.png" alt="" class="img-fluid">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> -->
+                        </div>
+                    </div> 
+                    
+                </div>
+            </div>
+        </section>     
+        {% endblock  %}
+            
+
+{% include 'footer.html' %}
+<!--
+    ==============
+    * JS Files *
+    ==============
+    -->
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <!-- jQuery -->
+    <script src="{% static 'assets/plugins/js/jquery.min.js' %}"></script>
+    <!-- popper -->
+    <script src="{% static 'assets/plugins/js/popper.min.js' %}"></script>
+    <!-- bootstrap -->
+    <script src="{% static 'assets/plugins/js/bootstrap.min.js' %}"></script>
+    <!-- owl carousel -->
+    <script src="{% static 'assets/plugins/js/owl.carousel.js' %}"></script>
+    <!-- validator -->
+    <script src="{% static 'assets/plugins/js/validator.min.js' %}"></script>
+    <!-- wow -->
+    <script src="{% static 'assets/plugins/js/wow.min.js' %}"></script>
+    <!-- mixin js-->
+    <script src="{% static 'assets/plugins/js/jquery.mixitup.min.js' %}"></script>
+   <!-- circle progress-->
+   <script src="{% static 'assets/plugins/js/circle-progress.js' %}"></script>
+   <!-- jquery nav -->
+    <script src="{% static 'assets/plugins/js/jquery.nav.js' %}"></script>
+    <!-- Fancybox js-->
+    <script src="{% static 'assets/plugins/js/jquery.fancybox.min.js' %}"></script>
+    <!-- Map api -->
+    <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyCRP2E3BhaVKYs7BvNytBNumU0MBmjhhxc"></script>
+    <!-- isotope js-->
+    <script src="{% static 'assets/plugins/js/isotope.pkgd.js' %}"></script>
+    <script src="{% static 'assets/plugins/js/packery-mode.pkgd.js' %}"></script>
+    <!-- Custom Scripts-->
+    <script src="{% static 'assets/js/map-init.js' %}"></script>
+    <script src="{% static 'assets/js/custom-scripts.js' %}"></script>
+
+
+    <!-- ****************
+      After neccessary customization/modification, Please minify 
+      JavaScript/jQuery according to http://browserdiet.com/en/ for better performance
+    **************** -->
+    <!-- STYLE SWITCH STYLESHEET ONLY FOR DEMO -->
+    <link rel="stylesheet" href="{% static 'demo/demo.css' %} ">
+    <script type="text/javascript" src="{% static 'demo/styleswitcher.js' %}"></script>
+    <script type="text/javascript" src="{% static 'demo/demo.js' %}"></script>
+       
+</body>
+
+</html>
