@@ -29,7 +29,7 @@ SECRET_KEY = 'o2z!!1rqn@!y1ci@p@_z+st_c-t*j(($+&hpk+$%i0z672xg!#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['ajayi-sodiq.herokuapp.com']
+ALLOWED_HOSTS = ['ajayisodiq1.herokuapp.com']
 
 
 # Application definition
@@ -89,13 +89,13 @@ DATABASES = {
     }
 }
 
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
-DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
-}
+# SECRET_KEY = config('SECRET_KEY')
+# DEBUG = config('DEBUG', default=False, cast=bool)
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=config('DATABASE_URL')
+#     )
+# }
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
