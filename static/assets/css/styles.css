@@ -528,7 +528,7 @@ ul {
 
 .home-2-img {
   
-  background-image: url('{{STATIC_URL}}/assets/images/home-bg-img.jpg'); }
+  background-image: url(../images/home-bg-img.jpg); }
 
 .featured-img-one {
   background-image: url( ../images/home-bg-img.jpg); }
