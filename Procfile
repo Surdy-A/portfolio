@@ -1,1 +1,1 @@
-web: gunicorn ajayisodiq1.wsgi --log-file -
+web: gunicorn sPortFolio.wsgi --log-file -
