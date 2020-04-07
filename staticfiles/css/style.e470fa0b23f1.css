@@ -594,7 +594,7 @@ textarea::-webkit-input-placeholder {
     position: absolute;
     left: 50%;
     top: 50%;
-    background-image: url(images/loading-animation.html); 
+    background-image: url("images/loading-animation.30a9aa3e2018.html"); 
     background-repeat: no-repeat;
     background-position: center;
     margin: -60px 0 0 -64px;
@@ -2256,7 +2256,7 @@ body.mobile .animated {
 	position: fixed;
 	width: 150%;
 	height: 150%;
-	background-image: url(demo/background/image-8.html);
+	background-image: url("demo/background/image-8.30a9aa3e2018.html");
 	-webkit-background-size: cover;
 	background-size: cover;
 }
