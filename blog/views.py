@@ -3,13 +3,14 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.shortcuts import render
 from .models import Post, Project, Review
-
+from sPortFolio.settings import PROJECT_ROOT
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from django.views.generic import ListView, FormView
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+
 
 
 
@@ -38,6 +39,7 @@ def aboutView(request):
 
 class BlogListView(ListView):
     model = Post
+    print('STATIC_ROOT' + PROJECT_ROOT)
     template_name = 'home.html'
 
 
