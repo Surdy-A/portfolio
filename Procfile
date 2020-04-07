@@ -1,0 +1,1 @@
+web: gunicorn sPortFolio.wsgi --log-file -
